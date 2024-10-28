@@ -1,3 +1,2 @@
-r-base
-r-base-dev
-r-cran-glmmTMB
+build-dep
+r-cran-glmmtmb
