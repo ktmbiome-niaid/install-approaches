@@ -1,1 +1,2 @@
-#biocManager::install("Maaslin2")
+install.packages("biocManager")
+biocManager::install("Maaslin2")
