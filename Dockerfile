@@ -15,6 +15,7 @@ RUN echo "Checking for 'apt.txt'..." \
         && xargs -a apt.txt apt-get install --yes \
         && apt-get clean > /dev/null \
         && rm -rf /var/lib/apt/lists/* \
+        && mv /lib/R/site-library/* /usr/local/lib/R/site-library
         ; fi
 USER ${NB_USER}
 
