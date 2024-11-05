@@ -1,3 +1,3 @@
-install.packages("glmmTMB", type="source")
-install.packages("biocManager")
-biocManager::install("Maaslin2")
+install.packages("glmmTMB",repos="https://glmmTMB.github.io/glmmTMB/repos",type="binary")
+install.packages("BiocManager")
+BiocManager::install("Maaslin2")
