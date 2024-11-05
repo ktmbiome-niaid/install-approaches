@@ -12,7 +12,7 @@ USER root
 RUN echo "Checking for 'apt.txt'..." \
         ; if test -f "apt.txt" ; then \
         apt-get update --fix-missing > /dev/null\
-        && xargs -a apt.txt apt-get install --yes \
+        && xargs -a apt.txt apt-get install \
         && apt-get clean > /dev/null \
         && rm -rf /var/lib/apt/lists/* \
         && mv -vn /lib/R/site-library/* /usr/local/lib/R/site-library/ \
