@@ -51,3 +51,5 @@ While I was doing this, I tried a couple of things, including but not limited to
 Still not building the container with Maaslin correctly installed...
 
 **Potential Solution 2**: Apt required too many dependencies (I think that's why it was failing -- almost 800MB of additional package dependencies), so I've removed it and am instead installing glmmTMB from the install.R again, possibly with different options based on https://rdrr.io/cran/glmmTMB/man/reinstalling.html.
+
+**Correct Answer**: I went back to R 4.2.0, which then installed an older version of Bioconductor, which then installed older versions of Maaslin2 and its dependencies, which worked with this particular system.
