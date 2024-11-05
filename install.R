@@ -1,3 +1,3 @@
-install.packages("glmmTMB",repos="https://glmmTMB.github.io/glmmTMB/repos",type="binary")
-install.packages("BiocManager")
+install.packages("remotes")
+remotes::install_versison("BiocManager", "3.18")
 BiocManager::install("Maaslin2")
