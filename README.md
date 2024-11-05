@@ -46,6 +46,8 @@ While I was doing this, I tried a couple of things, including but not limited to
 
 **Problem 2**: This became an issue that required solving after problem 1, but I'm not 100% sure if it existed before. Under the new paradigm, I couldn't install Maaslin2 in the environment. Trying to install it like any other package meant that it wasn't installed but the Rstudio environment was still presented, so you would do something like `library(Maaslin2)` and no package existed to pull up. 
 
-**Potential Solution**: It was a specific issue with compilation of RcppEigen within glmmTMB. It *seems* I am able to build by running from *apt*, which is kind of crazy. So creating an apt.txt file and putting r-cran-glmmtmb appears to maybe work. And then installing maaslin2 from the install.R file is at least what I'm trying right now. I'm still having compilation issues, but it's better than the red wall of text I was getting before...
+**Potential Solution 1**: It was a specific issue with compilation of RcppEigen within glmmTMB. It *seems* I am able to build by running from *apt*, which is kind of crazy. So creating an apt.txt file and putting r-cran-glmmtmb appears to maybe work. And then installing maaslin2 from the install.R file is at least what I'm trying right now. I'm still having compilation issues, but it's better than the red wall of text I was getting before...
 
 Still not building the container with Maaslin correctly installed...
+
+**Potential Solution 2**: Apt required too many dependencies (I think that's why it was failing -- almost 800MB of additional package dependencies), so I've removed it and am instead installing glmmTMB from the install.R again, possibly with different options based on https://rdrr.io/cran/glmmTMB/man/reinstalling.html.
